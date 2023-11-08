@@ -1,4 +1,4 @@
-const DontHardcode = () => {
+const DontHardcode = ({ nameProps }: string) => {
   const GENRES = [
     {
       identifier: "fiction",
@@ -19,12 +19,13 @@ const DontHardcode = () => {
   ]
   return (
     <div style={{ border: "1px solid red" }}>
-      <h1 style={{ color: "turquoise", }}>Book Genres</h1>
+      <h1 style={{ color: "turquoise" }}>Book Genres</h1>
+      <h1>{nameProps?.v.firstNamee + " " + nameProps?.v.lastNamee}</h1>
       <ul>
         {GENRES.map((genre, id) => (
-          <li>
+          <li key={id}>
             <div>
-              <h1 key={id}>{genre.name}</h1>
+              <h1>{genre.name}</h1>
             </div>
           </li>
         ))}
