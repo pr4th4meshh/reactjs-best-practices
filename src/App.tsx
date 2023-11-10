@@ -1,20 +1,22 @@
-import { signal } from "@preact/signals-react"
+// import { signal } from "@preact/signals-react"
 import "./App.css"
-import AvoidNestedTernaryOperator from "./tao-of-react-practices/AvoidNestedTernary"
-import DontHardcode from "./tao-of-react-practices/DontHardcode"
-import MoveListsInSeparateComponent from "./tao-of-react-practices/MoveListsInSeparateComponent"
-import PrimitiveProps from "./tao-of-react-practices/PrimitiveProps"
+// import AvoidNestedTernaryOperator from "./tao-of-react-practices/AvoidNestedTernary"
+// import DontHardcode from "./tao-of-react-practices/DontHardcode"
+// import MoveListsInSeparateComponent from "./tao-of-react-practices/MoveListsInSeparateComponent"
+// import PrimitiveProps from "./tao-of-react-practices/PrimitiveProps"
+import UseEffectHook from "./react-essential-hooks/useEffectHook"
+import UseMemoHook from "./react-essential-hooks/UseMemoHook"
+import UseCallbackHook from "./react-essential-hooks/UseCallbackHook"
+import UseContextHooks from "./react-essential-hooks/UseContextHooks"
 
-const firstName = "Prathamesh"
-const lastName = "Asolkar via Signal"
-const fullName = firstName + " " + lastName
+// const firstName = "Prathamesh"
+// const lastName = "Asolkar via Signal"
+// const fullName = firstName + " " + lastName
 
-const name = signal({
-  firstNamee: firstName,
-  lastNamee: lastName
-})
-
-console.log(name)
+// const name = signal({
+//   firstNamee: firstName,
+//   lastNamee: lastName
+// })
 
 function App() {
   return (
@@ -25,10 +27,16 @@ function App() {
           availabe on the internet
         </h1>
         {/* TAO OF REACT PRACTICES */}
-        <DontHardcode nameProps={name} />
+        {/* <DontHardcode nameProps={name} />
         <PrimitiveProps />
         <AvoidNestedTernaryOperator />
-        <MoveListsInSeparateComponent />
+        <MoveListsInSeparateComponent /> */}
+
+        {/* REACT ESSENTIAL HOOKS */}
+        {/* <UseEffectHook /> */}
+        {/* <UseMemoHook /> */}
+        {/* <UseCallbackHook /> */}
+        <UseContextHooks />
       </div>
     </>
   )
